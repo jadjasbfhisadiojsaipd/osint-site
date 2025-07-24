@@ -2,51 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OSINT Intel Hub</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSINT Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>OSINT Intel Hub</h1>
-    <nav>
-      <a href="#pricing">Pricing</a>
-      <a href="#info">About</a>
-      <a href="login.html" class="login-btn">Login</a>
-    </nav>
-  </header>
+<body class="bg-gray-950 text-white font-sans">
 
-  <main>
-    <section class="hero">
-      <h2>Open Source Intelligence Tools & Services</h2>
-      <p>Investigate smarter with our curated OSINT tools and tutorials.</p>
-      <a href="dashboard.html" class="cta-btn">Explore Dashboard</a>
-    </section>
-
-    <section id="pricing">
-      <h2>Pricing</h2>
-      <div class="pricing-plans">
-        <div class="plan">
-          <h3>Free</h3>
-          <p>Basic access to public tools</p>
-          <p><strong>$0/month</strong></p>
-        </div>
-        <div class="plan">
-          <h3>Pro</h3>
-          <p>Access to premium OSINT dashboards, reports & automation</p>
-          <p><strong>$29/month</strong></p>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-black/60 backdrop-blur-xl border-white/5 border-b">
+    <div class="relative">
+      <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600/60 via-blue-500/60 to-cyan-400/60"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <a class="flex items-center group" href="#">
+              <img src="/placeholder.svg" alt="Logo" width="25" height="25" class="group-hover:scale-110 transition-all duration-300">
+              <span class="ml-2 text-lg font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent group-hover:from-purple-200 group-hover:to-cyan-200 transition-all duration-300">OSINT Tools</span>
+            </a>
+            <div class="hidden sm:flex sm:ml-8 sm:space-x-8 items-center">
+              <a href="#" class="text-white hover:bg-white/5 rounded-lg px-3 py-2 text-sm transition-all duration-300">Home</a>
+              <a href="#dashboard" class="text-gray-300 hover:text-white hover:bg-white/5 rounded-lg px-3 py-2 text-sm transition-all duration-300">Dashboard</a>
+              <a href="#pricing" class="text-gray-300 hover:text-white hover:bg-white/5 rounded-lg px-3 py-2 text-sm transition-all duration-300">Pricing</a>
+              <a href="#login" class="text-gray-300 hover:text-white hover:bg-white/5 rounded-lg px-3 py-2 text-sm transition-all duration-300">Login</a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <section id="info">
-      <h2>About OSINT Intel Hub</h2>
-      <p>We help analysts, journalists, and cyber professionals gather open-source intelligence using modern tools and automation.</p>
-    </section>
-  </main>
+  <!-- Spacer for fixed navbar -->
+  <div class="h-16"></div>
 
-  <footer>
-    <p>&copy; 2025 OSINT Intel Hub</p>
-  </footer>
+  <!-- Dashboard Section -->
+  <section id="dashboard" class="p-6">
+    <h2 class="text-2xl font-bold mb-4">Welcome to Your OSINT Dashboard</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+      <div class="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-6 rounded-xl border border-white/10 shadow hover:shadow-purple-500/10 transition duration-300">
+        <h3 class="text-lg font-semibold mb-2">Tool 1</h3>
+        <p class="text-sm text-gray-300">Run passive reconnaissance on domains and IPs.</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-6 rounded-xl border border-white/10 shadow hover:shadow-purple-500/10 transition duration-300">
+        <h3 class="text-lg font-semibold mb-2">Tool 2</h3>
+        <p class="text-sm text-gray-300">Search email leaks and usernames across platforms.</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-6 rounded-xl border border-white/10 shadow hover:shadow-purple-500/10 transition duration-300">
+        <h3 class="text-lg font-semibold mb-2">Tool 3</h3>
+        <p class="text-sm text-gray-300">Check phone numbers for social media links.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="p-6">
+    <h2 class="text-2xl font-bold mb-4">Pricing</h2>
+    <div class="text-gray-300">Free tools coming soon. Premium plans under development.</div>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="p-6">
+    <h2 class="text-2xl font-bold mb-4">Login</h2>
+    <form class="space-y-4 max-w-md">
+      <input type="text" placeholder="Username" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
+      <input type="password" placeholder="Password" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
+      <button class="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-white transition">Log In</button>
+    </form>
+  </section>
+
 </body>
 </html>
